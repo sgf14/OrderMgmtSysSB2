@@ -8,6 +8,14 @@ QuickStart:
 	Dont really need Editor for this, but found it helpful in troubleshooting.
 3) There is a local instance that came  as part of PG admin download and the docker instance as of Nov 18.
 
+Docker DB instance Quickstart:  if you had to delete your appData/roaming to get it to work, then docker conn needs to be re-established
+1) Start docker container.  open pgAdmin/server/right click new server 
+2) enter name 'docker' on 1st tab
+3) host = 192.168.99.100 [validate ip via docker]
+4) user = dbuser
+5) password = password
+6) leave rest of settings at default- should estb conn once you save this.
+
 Details:
 
 Initial Launch/install/uninstall issues
