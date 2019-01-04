@@ -16,9 +16,9 @@ Docker DB instance Quickstart:  if you had to delete your appData/roaming to get
 5) password = password
 6) leave rest of settings at default- should estb conn once you save this.
 
-Details:
+Details:  both GUI and cli versions
 
-Initial Launch/install/uninstall issues
+GUI- PG Admin- Initial Launch/install/uninstall issues
 11/27/18: was having trouble with initial downloads, but seems to be fixed now.  added below for reference
 was getting an intermittent fatal error- cannot contact application server error after downloading.
 attempted with both version 11 and 10, but same thing happened.  was able to get this launched ok after
@@ -26,6 +26,16 @@ attempted with both version 11 and 10, but same thing happened.  was able to get
 2) clear contents of AppData/Roaming/pgadmin4.  it will recreate upon re-launch.  note this is a hidden folder.  in Explorer need to click/show hidden folders to see it
 these 2 steps seemed to clear the error and allowed app to launch ok.
 
-I think the java creation thing in application.properties may have been causung some performance issues.  It was taking a ton of disk drive activity and was exceeding slow to respond.  commented that out in java, un-installed postgres 10 app, then re installed new 11 instance and disk drive performance issues seemed to be fixed.
+I think the java creation thing in application.properties may have been causing some performance issues.  It was taking a ton of disk drive activity and was exceeding slow to respond.  commented that out in java, un-installed postgres 10 app, then re installed new 11 instance and disk drive performance issues seemed to be fixed.
 
-the upshot of this is that its probably better to run a db script and create the table rather than letting java do it programmatically.  the only reason the online tutorial did that was to avoid getting into postgres startup issues.  but you would never do this in production anyway, its just a method to allow development/ practive type stuff as a setting.
+the upshot of this is that its probably better to run a db script and create the table rather than letting java do it programmatically.  the only reason the online tutorial did that was to avoid getting into postgres startup issues.  but you would never do this in production anyway, its just a method to allow development/ proactive type stuff as a setting.
+
+CLI- 
+Added postgres to system environmentals.  key command = psql
+type psql --help for command list.
+note its psql -V [capital] for basic version check
+login = dbuser password = password
+or postgres. password = admin
+note that Scott [the default] is not setup. need to change this
+
+ie cmd: psql -l -U dbuser [lists databases, logging in as dbuser- will prompt ofr password'
