@@ -1,3 +1,4 @@
+keeping for programming notes- see /docs folder
 **** THIS IS OLD ***
 ** see OmsXX grouping of the 3 projects. Product, Order and Customer **
 this 1st one was created under lesson 1 as ProductService before I understood the full microservice design/interaction
