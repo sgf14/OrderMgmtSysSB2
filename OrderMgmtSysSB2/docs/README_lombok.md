@@ -1,4 +1,4 @@
-note lombok is a java preprocessor and therefore needs some special IDE
+Note lombok is a java preprocessor and therefore needs some special IDE
 setup to enable its annotated methods to be seen & active.
 
 1) Add lombok dependency to project- pom or gradle file.
